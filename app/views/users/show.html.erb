@@ -1,0 +1,11 @@
+<h1>Welcome <%= @user.username %>!</h1>
+
+<h2>pets:</h2>
+
+<%= button_to 'New Pet', new_pet_path, method: :get %>
+
+<% @user.pets.each do |pet| %>
+    <h3><%= link_to pet.name, pet_path(pet) %></h3>
+    <%= pet.animal %> - <%= pet.description %>
+    <br>
+<% end %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetSpace</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <% if logged_in? %>
+        <%= link_to 'All Pets', pets_path %>
+        <%= link_to 'Profile', current_user %>
+        <%= link_to 'Log Out Here', logout_path, method: 'delete' %>
+      <% end %>
+    </div>
+
+    <div>
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <% end %>
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>
