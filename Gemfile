@@ -5,7 +5,7 @@ ruby '2.6.1'
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'sqlite3', '~> 1.4'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 # Use SCSS for stylesheets
 
